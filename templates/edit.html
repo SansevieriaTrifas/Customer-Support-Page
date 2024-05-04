@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+<title>Edit Post</title>
+{% endblock %}
+
+{% block body %}
+<h1>Editing Post</h1>
+
+<hr>
+<h2>Edit:</h2>
+<form action='/edit/{{posty.id}}' method='POST'>
+
+    <label for="name">Name:</label>
+    <input class="form-control" type="text" name='name' id='name' value="{{ posty.name }}" aria-label="Enter Name">
+    <br>
+    <label for="phone_num">Phone Number:</label>
+    <input class="form-control" type="text" name='phone_num' id='phone_num' value="{{ posty.phone_num }}"
+        aria-label="Enter Phone Number">
+    <br>
+    <label for="company">Company:</label>
+    <input class="form-control" type="text" name='company' id='company' value="{{ posty.company }}"
+        aria-label="Enter Company">
+    <br>
+    <label for="email">Email:</label>
+    <input class="form-control" type="text" name='email' id='email' value="{{ posty.email }}" aria-label="Enter Email">
+    <br>
+    <label for="subject">Subject:</label>
+    <input class="form-control" type="text" name='subject' id='subject' value="{{ posty.subject }}"
+        aria-label="Enter Subject">
+    <br>
+    <label for="problem_description">Problem Description:</label>
+    <textarea class="form-control" name='problem_description' id="problem_description" aria-label="Problem Description"
+        rows="3">{{ posty.problem_description }}</textarea>
+    <br>
+    <label for="callback">Callback Date and Time:</label>
+    <input class="form-control" type="text" name='callback' id='callback' value="{{ posty.callback }}"
+        aria-label="Enter date and time of callback">
+    <br>
+    <input type='submit' value='Save'>
+</form>
+<hr>
+
+{% endblock %}

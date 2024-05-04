@@ -11,4 +11,9 @@ Administration page displays customers' posts (sorting them by the date posted),
 This project was done in web framework Flask, written in Python, using Visual Studio code. 1) Install additional packages with command: pip install -r requirements.txt. 2) command: flask run This project requires the following modules, which are not included in flask: flask_sqlalchemy, flask_wtf, flask_moment, flask_bootstrap, wtforms
 
 ## NEXT STEPS
-1) Improving the design of the home page 2) Making the option of scheduling callback on Saturdays 3) Creating a table for the administration page, which would be sortable by different columns 4) Adding flash messages 5) Refactoring code, so that the code is separated into several scripts 6) API and unit testing
+1) Improving the design of the home page,
+2) Making the option of scheduling callback on Saturdays, 
+3) Creating a table for the administration page, which would be sortable by different columns,
+4) Adding flash messages,
+5) Refactoring code, so that the code is separated into several scripts,
+6) API and unit testing.

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+<title>Administration</title>
+{% endblock %}
+
+{% block body %}
+<br>
+<div>
+    <h1>All entries</h1>
+
+</div>
+<br>
+<hr>
+
+{% for post in posts|sort(attribute='date_posted', reverse = True) %}
+
+<br>
+<h2>{{ post.subject }}</h2>
+<br>
+Written by: {{ post.name }} on {{ post.date_posted }}
+<br>
+<hr>
+{% if post.phone_num %}
+phone number: {{ post.phone_num }}
+<br>
+<hr>
+{% endif %}
+{% if post.company %}
+company: {{ post.company }}
+<br>
+<hr>
+{% endif %}
+email: {{ post.email }}
+<br>
+<hr>
+
+<p style="white-space:pre-wrap">{{ post.problem_description }}</p>
+<hr>
+{% if post.callback %}
+Callback scheduled on {{ post.callback }}
+<br>
+<hr>
+{% endif %}
+<a class="btn btn-danger" href='/hide/{{post.id}}'>Hide</a>
+<a class="btn btn-primary" href='/edit/{{post.id}}'>Edit</a>
+<br>
+
+
+{% endfor %}
+
+{% endblock %}
